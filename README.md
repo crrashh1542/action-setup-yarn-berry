@@ -1,8 +1,11 @@
-# action-yarn-setup-berry
+# action-setup-yarn-berry
 
-哈喽哇！这是一个可以快速设置 Yarn berry 环境的 Action。  
+![License](https://img.shields.io/github/license/crrashh1542/action-setup-yarn-berry)
+![当前版本](https://img.shields.io/github/release/crrashh1542/action-setup-yarn-berry)
 
-Hi! Here is an action to help you setup Yarn (version berry) environment quickly!
+👋 哈喽哇！这是一个可以快速设置 Yarn berry 和依赖环境的 Action。  
+
+👋 Hi! Here is an action to help you setup Yarn (version berry) environment and dependencies quickly!
 
 ## 基本用法 / Basic usage
 ```yaml
