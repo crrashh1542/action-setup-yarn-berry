@@ -30,10 +30,12 @@ runs:
          node-version: ${{ inputs.node-version }}
 
     - name: 🛠️ Setup Yarn
+      shell: bash
       run: |
          npm install yarn -g
          yarn set version berry
 
     - name: 👀 Setup dependencies
+      shell: bash
       run: |
          yarn install
