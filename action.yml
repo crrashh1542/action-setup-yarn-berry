@@ -13,7 +13,7 @@ inputs:
       default: '0'
    node-version:
       description: 'The version of Node.js to be set up'
-      default: 'latest'
+      default: '20'
 
 # Detailed work to do
 runs:
@@ -28,14 +28,10 @@ runs:
       uses: actions/setup-node@v4
       with:
          node-version: ${{ inputs.node-version }}
+         cache: 'yarn'
 
-    - name: 🛠️ Setup Yarn
+    - name: 🛠️ Setup environment
       shell: bash
       run: |
-         npm install yarn -g
          yarn set version berry
-
-    - name: 👀 Setup dependencies
-      shell: bash
-      run: |
          yarn install
