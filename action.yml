@@ -8,16 +8,21 @@ branding:
 
 # Parameter to input
 inputs:
+   fetch-depth:
+      description: 'The depth to checkout the source of your repo'
+      default: '0'
    node-version:
       description: 'The version of Node.js to be set up'
-      required: true
+      default: 'latest'
 
-# Detailed commands to run
+# Detailed work to do
 runs:
    using: 'composite'
    steps:
     - name: 🧐 Checkout
       uses: actions/checkout@v4
+      with:
+         fetch-depth: ${{ inputs.fetch-depth }}
 
     - name: 🔧 Setup Node.js
       uses: actions/setup-node@v4
@@ -28,4 +33,7 @@ runs:
       run: |
          npm install yarn -g
          yarn set version berry
+
+    - name: 👀 Setup dependencies
+      run: |
          yarn install
