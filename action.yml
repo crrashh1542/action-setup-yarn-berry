@@ -1,0 +1,31 @@
+# Basic action information
+name: 'Setup Yarn (version berry)'
+description: 'An GitHub Action to set up a Yarn environment with version berry.'
+author: 'crrashh1542'
+branding:
+   icon: 'package'
+   color: 'blue'
+
+# Parameter to input
+inputs:
+   node-version:
+      description: 'The version of Node.js to be set up'
+      required: true
+
+# Detailed commands to run
+runs:
+   using: 'composite'
+   steps:
+    - name: 🧐 Checkout
+      uses: actions/checkout@v4
+
+    - name: 🔧 Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+         node-version: ${{ inputs.node-version }}
+
+    - name: 🛠️ Setup Yarn
+      run: |
+         npm install yarn -g
+         yarn set version berry
+         yarn install
