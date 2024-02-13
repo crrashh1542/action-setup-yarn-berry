@@ -9,7 +9,7 @@
 
 ## 基本用法 / Basic usage
 ```yaml
-- uses: crrashh1542/action-setup-yarn-berry@main
+- uses: crrashh1542/action-setup-yarn-berry@v1.0.0
 ```
 
 ## 添加输入 / Inputs to add
@@ -17,7 +17,7 @@
 
 Parameters shown below was extended from [`actions/checkout`](https://github.com/actions/checkout) and [`actions/setup-node`](https://github.com/actions/setup-node), which enables you to input like what you does with such actions.
 ```yaml
-- uses: crrashh1542/action-setup-yarn-berry@main
+- uses: crrashh1542/action-setup-yarn-berry@v1.0.0
   with:
     fetch-depth: '1'
     node-version: '20'
